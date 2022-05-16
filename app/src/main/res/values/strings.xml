@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Careerly_Android</string>
+    <string name="home">home</string>
+    <string name="search">search</string>
+    <string name="alarm">alarm</string>
+    <string name="profile">profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
