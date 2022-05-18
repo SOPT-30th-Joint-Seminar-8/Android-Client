@@ -79,7 +79,11 @@ dependencies {
     // Logger - Timber
     implementation(ThirdPartyDependencies.timber)
 
+    // ReadMoreLine
+    implementation(ThirdPartyDependencies.readMoreLine)
+
     // Test Dependency
     testImplementation(TestDependencies.androidTest)
     testImplementation(TestDependencies.jUnit)
+
 }
