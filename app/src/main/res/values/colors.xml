@@ -15,6 +15,8 @@
     <color name="medium_gray">#777777</color>
     <color name="mdgray1">#999999</color>
     <color name="mdgray2">#C7C7C7</color>
+    <color name="mdgray3">#AAAAAA</color>
     <color name="ltgray1">#F7F7F7</color>
     <color name="ltgray2">#EEEEEE</color>
+    <color name="careerly_red_nonactivated">#EFC3BC</color>
 </resources>
