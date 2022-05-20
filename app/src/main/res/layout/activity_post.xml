@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="vm"
+            type="org.sopt.careerly_android.ui.viewmodel.PostViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -98,6 +100,7 @@
             android:background="@null"
             android:ems="10"
             android:gravity="top"
+            android:text="@={vm.postMainText}"
             android:hint="@string/share_think"
             android:inputType="textPersonName"
             android:letterSpacing="-0.02"

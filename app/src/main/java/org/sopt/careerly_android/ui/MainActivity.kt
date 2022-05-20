@@ -9,11 +9,11 @@ import androidx.core.view.MenuItemCompat
 import org.sopt.careerly_android.R
 import org.sopt.careerly_android.databinding.ActivityMainBinding
 import org.sopt.careerly_android.ui.home.HomeFragment
+import org.sopt.careerly_android.ui.viewmodel.MainViewModel
 import org.sopt.careerly_android.util.binding.BindingActivity
 import org.sopt.careerly_android.util.borderedCircularBitmap
 import org.sopt.careerly_android.util.ext.replace
 import org.sopt.careerly_android.util.px
-import org.sopt.careerly_android.viewmodel.MainViewModel
 
 class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main) {
     private val viewModel: MainViewModel by viewModels()
