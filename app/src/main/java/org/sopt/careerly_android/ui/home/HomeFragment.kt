@@ -1,18 +1,33 @@
 package org.sopt.careerly_android.ui.home
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import org.sopt.careerly_android.R
+import org.sopt.careerly_android.databinding.FragmentHomeBinding
+import org.sopt.careerly_android.ui.viewmodel.HomeViewModel
+import org.sopt.careerly_android.util.binding.BindingFragment
 
-class HomeFragment : Fragment() {
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+class HomeFragment : BindingFragment<FragmentHomeBinding>(R.layout.fragment_home) {
+    private val viewModel: HomeViewModel by viewModels()
+    private val data = mutableListOf<MultiData>()
+    private lateinit var multiAdapter: MultiViewAdapter
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewModel.getMultiData()
+        initRecycler()
+        observeData()
+    }
+
+    private fun observeData() {
+        viewModel.multiData.observe(viewLifecycleOwner) {
+            multiAdapter.data = data
+        }
+    }
+
+    private fun initRecycler() {
+        multiAdapter = MultiViewAdapter()
+        binding.rvHome.adapter = multiAdapter
     }
 }

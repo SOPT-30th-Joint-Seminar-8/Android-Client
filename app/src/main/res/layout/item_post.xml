@@ -2,13 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <View
         android:id="@+id/vi_line"
         android:layout_width="match_parent"
         android:layout_height="12dp"
-        android:background="@color/careerly_lightgray"
+        android:background="@color/ltgray1"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.imageview.ShapeableImageView
@@ -45,7 +45,7 @@
         android:fontFamily="@font/pretendard_regular"
         android:maxLines="1"
         android:text="Product Designer.@hypcom"
-        android:textColor="@color/careerly_medium_gray"
+        android:textColor="@color/mdgray1"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@id/siv_image"
         app:layout_constraintTop_toBottomOf="@id/tv_name" />
@@ -58,7 +58,7 @@
         android:layout_marginTop="1dp"
         android:fontFamily="@font/pretendard_regular"
         android:text="- 2시간 전"
-        android:textColor="@color/careerly_medium_gray"
+        android:textColor="@color/mdgray1"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@id/tv_introduce"
         app:layout_constraintTop_toBottomOf="@id/tv_name" />
@@ -89,7 +89,7 @@
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/siv_image"
-        app:readMoreColor="@color/careerly_medium_gray"
+        app:readMoreColor="@color/mdgray1"
         app:readMoreMaxLine="5"
         app:readMoreText="... 더보기" />
 
@@ -123,7 +123,7 @@
             android:layout_marginTop="2dp"
             android:fontFamily="@font/pretendard_bold"
             android:text="원티드"
-            android:textColor="@color/careerly_medium_gray"
+            android:textColor="@color/mdgray1"
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_detail_content" />
@@ -155,7 +155,7 @@
         android:layout_marginEnd="15dp"
         android:fontFamily="@font/pretendard_regular"
         android:text="조회 41"
-        android:textColor="@color/careerly_medium_gray"
+        android:textColor="@color/mdgray1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cl_detail" />
 
@@ -163,10 +163,12 @@
         android:id="@+id/iv_recommend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:src="@drawable/ic_icon_recommend"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_recommended" />
 
     <TextView
@@ -177,7 +179,7 @@
         android:layout_marginTop="20dp"
         android:fontFamily="@font/pretendard_bold"
         android:text="추천해요"
-        android:textColor="@color/careerly_medium_gray"
+        android:textColor="@color/mdgray1"
         app:layout_constraintStart_toEndOf="@id/iv_recommend"
         app:layout_constraintTop_toBottomOf="@id/tv_recommended" />
 

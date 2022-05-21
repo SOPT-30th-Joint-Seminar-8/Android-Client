@@ -1,23 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <View
-        android:id="@+id/vi_line"
-        android:layout_width="152dp"
-        android:layout_height="12dp"
-        android:background="@color/careerly_lightgray"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="152dp"
         android:layout_height="270dp"
         app:cardCornerRadius="4dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/vi_line">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_profile"
@@ -28,7 +21,7 @@
                 android:id="@+id/iv_profile"
                 android:layout_width="152dp"
                 android:layout_height="119dp"
-                android:scaleType="fitXY"
+                android:scaleType="centerCrop"
                 android:src="@drawable/ic_launcher_background"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/cl_profile" />
@@ -67,7 +60,7 @@
                 android:layout_marginTop="9dp"
                 android:fontFamily="@font/pretendard_regular"
                 android:text="팔로워 1,000명 이상"
-                android:textColor="@color/careerly_medium_gray"
+                android:textColor="@color/mdgray1"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
