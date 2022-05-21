@@ -5,6 +5,10 @@
 
     <data>
 
+        <variable
+            name="homeFragment"
+            type="org.sopt.careerly_android.ui.home.HomeFragment" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -44,19 +48,21 @@
             app:layout_constraintTop_toBottomOf="@id/iv_logo"
             app:shapeAppearanceOverlay="@style/circle" />
 
-        <EditText
-            android:id="@+id/et_think"
+        <TextView
+            android:id="@+id/tv_think"
             android:layout_width="0dp"
-            android:layout_height="53dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:layout_marginTop="17dp"
             android:layout_marginEnd="16dp"
             android:background="@color/ltgray1"
             android:fontFamily="@font/pretendard_regular"
             android:hint="나누고 싶은 생각이 있으신가요?"
-            android:inputType="text"
+            android:onClick="@{()->homeFragment.btnGoToPost()}"
             android:paddingStart="16dp"
-            android:paddingEnd="81dp"
+            android:paddingTop="17dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="20dp"
             android:textColor="#777777"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -71,7 +77,7 @@
             android:overScrollMode="never"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/et_think" />
+            app:layout_constraintTop_toBottomOf="@id/tv_think" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

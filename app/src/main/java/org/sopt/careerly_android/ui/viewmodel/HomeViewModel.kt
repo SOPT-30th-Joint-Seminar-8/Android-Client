@@ -1,5 +1,8 @@
 package org.sopt.careerly_android.ui.viewmodel
 
+import android.app.Activity
+import android.content.Intent
+import android.widget.Button
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
