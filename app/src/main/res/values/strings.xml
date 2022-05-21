@@ -4,6 +4,9 @@
     <string name="search">search</string>
     <string name="alarm">alarm</string>
     <string name="profile">profile</string>
+    <string name="post_content">#창업 #지원 #정보\n스타트업 제너레이터 프로그램\n\n안녕하세요 앤틀러 코리아입니다.\n앤틀러는 창업에 탁월한 역량이 있음에도 섣불리
+시도하지 못하는 예비창업자를 지원하고 있습니다.\n구체적인 아이디어나 팀이 없어도 혁신을 꿈꾸는\n모든 분을 환영합니다.
+이번 8월에 시작될 한국의 첫 앤틀러 스타트업  제너레이터 프로그램에 많은 응원 부탁드립니다. 프로그램 소개 및 지원 링크는 아래 링크에서 확인하실 수 있습니다.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
