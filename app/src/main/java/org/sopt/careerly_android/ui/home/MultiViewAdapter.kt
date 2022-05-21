@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import org.sopt.careerly_android.databinding.ItemPostBinding
 import org.sopt.careerly_android.databinding.RecyclerviewProfileBinding
+import org.sopt.careerly_android.ui.viewmodel.MainViewModel
+import org.sopt.careerly_android.ui.viewmodel.MainViewModel.Companion.EXAMPLE_PROFILE_IMAGE
 
 class MultiViewAdapter :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -19,9 +21,9 @@ class MultiViewAdapter :
         }
 
     private val profileInfo = mutableListOf(
-        ProfileData("Hello"),
-        ProfileData("Hello2"),
-        ProfileData("Hello3")
+        ProfileData("Hello", EXAMPLE_PROFILE_IMAGE),
+        ProfileData("Hello2", EXAMPLE_PROFILE_IMAGE),
+        ProfileData("Hello3", EXAMPLE_PROFILE_IMAGE)
     )
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {

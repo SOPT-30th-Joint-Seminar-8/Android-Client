@@ -3,6 +3,7 @@ package org.sopt.careerly_android.ui.home
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import org.sopt.careerly_android.databinding.ItemProfileBinding
 
 class ProfileAdapter : RecyclerView.Adapter<ProfileAdapter.ProfileViewHolder>() {
@@ -32,6 +33,9 @@ class ProfileAdapter : RecyclerView.Adapter<ProfileAdapter.ProfileViewHolder>() 
 
         fun bind(item: ProfileData) {
             binding.tvName.text = item.name
+            Glide.with(binding.ivProfile.context)
+                .load(item.profileImage)
+                .into(binding.ivProfile)
         }
     }
 }
