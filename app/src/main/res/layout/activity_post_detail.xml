@@ -6,4 +6,198 @@
     android:layout_height="match_parent"
     tools:context=".ui.post.detail.PostDetailActivity">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_post_top"
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_btn_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/btn_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/ic_btn_edit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/sv_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/cl_post_bottom"
+        app:layout_constraintTop_toBottomOf="@+id/cl_post_top">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="22dp"
+                android:src="@drawable/img_profile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="22dp"
+                android:fontFamily="@font/pretendard_bold"
+                android:text="한지유"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                app:layout_constraintStart_toEndOf="@id/img_profile"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="1dp"
+                android:fontFamily="@font/pretendard_regular"
+                android:text="Product Designer.@hyp...ㆍ2시간 전"
+                android:textColor="@color/medium_gray"
+                android:textSize="12dp"
+                app:layout_constraintStart_toEndOf="@id/img_profile"
+                app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+            <ImageView
+                android:id="@+id/btn_follow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_btn_follow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="80dp"
+                android:fontFamily="@font/pretendard_regular"
+                android:text="#창업"
+                android:textColor="#343434"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_post_container"
+                android:layout_width="match_parent"
+                android:layout_height="86dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="1dp"
+                android:background="@drawable/circle_light_gray_radius_4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_content">
+
+                <TextView
+                    android:id="@+id/tv_link_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:text="앤틀러 : 스타트업 제너레이터 프로그램\n참가자 모집 | 원티드"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_link_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/pretendard_regular"
+                    android:text="원티드"
+                    android:textColor="@color/medium_gray"
+                    android:textSize="12dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ImageView
+                    android:id="@+id/img_link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/img_link"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="20dp"
+                android:text="2022년 5월 19일(목) 오전 1:20"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cl_post_container"
+
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_post_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/et_review"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginEnd="44dp"
+            android:layout_marginBottom="12dp"
+            android:background="@null"
+            android:fontFamily="@font/pretendard_regular"
+            android:hint="게시물에 대해 이야기를 나눠보세요."
+            android:textColorHint="@color/medium_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/btn_registration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="12dp"
+            android:src="@drawable/ic_btn_registration"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
