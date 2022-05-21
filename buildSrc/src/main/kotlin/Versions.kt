@@ -26,6 +26,7 @@ object Versions {
     const val androidTestVersion = "1.1.3"
     const val timberVersion = "4.7.1"
     const val leakCanaryVersion = "2.6"
+    const val readMoreLineVersion = "1.0.0"
 
     val javaVersion = JavaVersion.VERSION_11
     const val jvmVersion = "11"

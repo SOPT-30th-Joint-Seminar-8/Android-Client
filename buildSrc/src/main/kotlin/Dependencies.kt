@@ -47,6 +47,7 @@ object ThirdPartyDependencies {
     const val timber = "com.jakewharton.timber:timber:${Versions.timberVersion}"
     const val leakCanary =
         "com.squareup.leakcanary:leakcanary-android:${Versions.leakCanaryVersion}"
+    const val readMoreLine = "kr.co.prnd:readmore-textview:${Versions.readMoreLineVersion}"
 }
 
 object ClassPathPlugins {
