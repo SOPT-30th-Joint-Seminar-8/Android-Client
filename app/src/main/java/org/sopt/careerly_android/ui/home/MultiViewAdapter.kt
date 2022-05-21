@@ -67,9 +67,11 @@ class MultiViewAdapter :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: MultiData) {
-            binding.tvName.text = item.name
-            loadImage(binding.sivImage, item.profileImage)
-            loadImage(binding.ivShareContent,item.postImage)
+            with(binding) {
+                tvName.text = item.name
+                loadImage(sivImage, item.profileImage)
+                loadImage(ivShareContent, item.postImage)
+            }
         }
 
         private fun loadImage(imageView: ImageView, image: String) {
