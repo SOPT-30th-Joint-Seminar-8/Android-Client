@@ -10,7 +10,6 @@ import org.sopt.careerly_android.util.binding.BindingFragment
 
 class HomeFragment : BindingFragment<FragmentHomeBinding>(R.layout.fragment_home) {
     private val viewModel: HomeViewModel by viewModels()
-    private val data = mutableListOf<MultiData>()
     private lateinit var multiAdapter: MultiViewAdapter
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -22,7 +21,7 @@ class HomeFragment : BindingFragment<FragmentHomeBinding>(R.layout.fragment_home
 
     private fun observeData() {
         viewModel.multiData.observe(viewLifecycleOwner) {
-            multiAdapter.data = data
+            multiAdapter.data = it
         }
     }
 

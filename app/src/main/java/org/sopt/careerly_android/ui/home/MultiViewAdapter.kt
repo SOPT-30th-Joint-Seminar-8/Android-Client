@@ -2,7 +2,9 @@ package org.sopt.careerly_android.ui.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import org.sopt.careerly_android.databinding.ItemPostBinding
 import org.sopt.careerly_android.databinding.RecyclerviewProfileBinding
 
@@ -64,6 +66,15 @@ class MultiViewAdapter :
 
         fun bind(item: MultiData) {
             binding.tvName.text = item.name
+            loadImage(binding.sivImage, item.profileImage)
+            loadImage(binding.ivShareContent,item.postImage)
+        }
+
+        private fun loadImage(imageView: ImageView, image: String) {
+            Glide.with(imageView)
+                .load(image)
+                .centerCrop()
+                .into(imageView)
         }
     }
 
