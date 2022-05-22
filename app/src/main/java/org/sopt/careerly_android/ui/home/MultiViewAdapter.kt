@@ -1,5 +1,6 @@
 package org.sopt.careerly_android.ui.home
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -7,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import org.sopt.careerly_android.databinding.ItemPostBinding
 import org.sopt.careerly_android.databinding.RecyclerviewProfileBinding
-import org.sopt.careerly_android.ui.viewmodel.MainViewModel
+import org.sopt.careerly_android.ui.post.detail.PostDetailActivity
 import org.sopt.careerly_android.ui.viewmodel.MainViewModel.Companion.EXAMPLE_PROFILE_IMAGE
 
 class MultiViewAdapter :
@@ -68,6 +69,9 @@ class MultiViewAdapter :
 
         fun bind(item: MultiData) {
             with(binding) {
+                root.setOnClickListener {
+                    root.context.startActivity(Intent(root.context, PostDetailActivity::class.java))
+                }
                 tvName.text = item.name
                 loadImage(sivImage, item.profileImage)
                 loadImage(ivShareContent, item.postImage)

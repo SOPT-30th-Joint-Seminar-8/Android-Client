@@ -4,11 +4,6 @@
     android:viewportWidth="33"
     android:viewportHeight="33">
   <path
-    android:pathData="M7.227,16.5H25.227M7.227,16.086L13.812,9.5M7.227,16.914L13.812,23.5"
-    android:height="32dp"
-    android:viewportWidth="33"
-    android:viewportHeight="32">
-  <path
       android:pathData="M7.227,16H25.227M7.227,15.586L13.813,9M7.227,16.414L13.813,23"
       android:strokeWidth="2"
       android:fillColor="#00000000"

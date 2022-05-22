@@ -15,8 +15,8 @@ import org.sopt.careerly_android.R
 import org.sopt.careerly_android.databinding.ActivityPostDetailBinding
 import org.sopt.careerly_android.ui.ReviewAdapter
 import org.sopt.careerly_android.ui.ReviewData
+import org.sopt.careerly_android.ui.viewmodel.MainViewModel.Companion.EXAMPLE_PROFILE_IMAGE
 import org.sopt.careerly_android.util.binding.BindingActivity
-import org.sopt.careerly_android.viewmodel.MainViewModel.Companion.EXAMPLE_PROFILE_IMAGE
 
 class PostDetailActivity :
     BindingActivity<ActivityPostDetailBinding>(R.layout.activity_post_detail) {
