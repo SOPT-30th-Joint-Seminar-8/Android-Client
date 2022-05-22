@@ -3,6 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/RoundS/AndroidStudioProject/Android-Client/app/src/main/res/drawable/circle_light_gray_border.xml" value="0.264" />
+        <entry key="..\:/Users/RoundS/AndroidStudioProject/Android-Client/app/src/main/res/drawable/circle_light_gray_radius_4.xml" value="0.2095" />
+        <entry key="..\:/Users/RoundS/AndroidStudioProject/Android-Client/app/src/main/res/drawable/circle_light_gray_radius_40.xml" value="0.102" />
+        <entry key="..\:/Users/RoundS/AndroidStudioProject/Android-Client/app/src/main/res/drawable/ic_btn_edit.xml" value="0.1" />
+        <entry key="..\:/Users/RoundS/AndroidStudioProject/Android-Client/app/src/main/res/drawable/ic_btn_registration.xml" value="0.1" />
+        <entry key="..\:/Users/RoundS/AndroidStudioProject/Android-Client/app/src/main/res/drawable/ic_container_imbedded.xml" value="0.2285" />
+        <entry key="..\:/Users/RoundS/AndroidStudioProject/Android-Client/app/src/main/res/drawable/ic_home.xml" value="0.1" />
+        <entry key="..\:/Users/RoundS/AndroidStudioProject/Android-Client/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/RoundS/AndroidStudioProject/Android-Client/app/src/main/res/layout/activity_main.xml" value="0.253125" />
+        <entry key="..\:/Users/RoundS/AndroidStudioProject/Android-Client/app/src/main/res/layout/activity_post.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/RoundS/AndroidStudioProject/Android-Client/app/src/main/res/layout/activity_post_detail.xml" value="0.4" />
+        <entry key="..\:/Users/RoundS/AndroidStudioProject/Android-Client/app/src/main/res/layout/fragment_empty.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/RoundS/AndroidStudioProject/Android-Client/app/src/main/res/layout/fragment_home.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/RoundS/AndroidStudioProject/Android-Client/app/src/main/res/layout/item_review_list.xml" value="0.1111111111111111" />
         <entry key="..\:/Users/joon_/Desktop/Android-Client/app/src/main/res/drawable-v24/circle_light_gray_radius_4.xml" value="0.259" />
         <entry key="..\:/Users/joon_/Desktop/Android-Client/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/joon_/Desktop/Android-Client/app/src/main/res/layout/activity_post.xml" value="0.25364583333333335" />
