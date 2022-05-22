@@ -17,6 +17,24 @@
         <entry key="..\:/Users/RoundS/AndroidStudioProject/Android-Client/app/src/main/res/layout/fragment_empty.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/RoundS/AndroidStudioProject/Android-Client/app/src/main/res/layout/fragment_home.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/RoundS/AndroidStudioProject/Android-Client/app/src/main/res/layout/item_review_list.xml" value="0.1111111111111111" />
+        <entry key="..\:/Users/joon_/Desktop/Android-Client/app/src/main/res/drawable-v24/circle_light_gray_radius_4.xml" value="0.259" />
+        <entry key="..\:/Users/joon_/Desktop/Android-Client/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/joon_/Desktop/Android-Client/app/src/main/res/layout/activity_post.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/joon_/Desktop/Android-Client/app/src/main/res/layout/activity_post_detail.xml" value="0.1" />
+        <entry key="..\:/Users/joon_/Desktop/Android-Client/app/src/main/res/layout/fragment_empty.xml" value="0.1" />
+        <entry key="..\:/Users/joon_/Desktop/Android-Client/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/Users/joon_/Desktop/Android-Client/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
+        <entry key="..\:/Users/joon_/Desktop/Android-Client/app/src/main/res/layout/item_post.xml" value="0.264" />
+        <entry key="..\:/Users/joon_/Desktop/Android-Client/app/src/main/res/layout/item_profile.xml" value="0.264" />
+        <entry key="..\:/Users/joon_/Desktop/Android-Client/app/src/main/res/layout/recyclerview_profile.xml" value="0.152" />
+        <entry key="..\:/Users/joon_/Desktop/Android-Client/app/src/main/res/menu/menu_main.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/joon_/Desktop/lee1212/Android-Client/app/src/main/res/drawable-v24/circle_light_gray_radius_4.xml" value="0.149" />
+        <entry key="..\:/Users/joon_/Desktop/lee1212/Android-Client/app/src/main/res/drawable/circle_red_white_radius_4.xml" value="0.1" />
+        <entry key="..\:/Users/joon_/Desktop/lee1212/Android-Client/app/src/main/res/layout-land/fragment_empty.xml" value="0.21472663139329806" />
+        <entry key="..\:/Users/joon_/Desktop/lee1212/Android-Client/app/src/main/res/layout/activity_main.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/joon_/Desktop/lee1212/Android-Client/app/src/main/res/layout/fragment_empty.xml" value="0.72" />
+        <entry key="..\:/Users/joon_/Desktop/lee1212/Android-Client/app/src/main/res/layout/fragment_home.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/joon_/Desktop/lee1212/Android-Client/app/src/main/res/layout/item_post.xml" value="0.2526041666666667" />
         <entry key="app/src/main/res/font/pretendard.xml" value="0.15416666666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3488372093023256" />
         <entry key="app/src/main/res/layout/activity_post.xml" value="0.23333333333333334" />

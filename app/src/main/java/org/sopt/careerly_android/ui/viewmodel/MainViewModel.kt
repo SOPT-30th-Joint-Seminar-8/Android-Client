@@ -1,4 +1,4 @@
-package org.sopt.careerly_android.viewmodel
+package org.sopt.careerly_android.ui.viewmodel
 
 import android.graphics.Bitmap
 import androidx.lifecycle.LiveData

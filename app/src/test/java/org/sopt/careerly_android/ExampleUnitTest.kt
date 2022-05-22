@@ -1,4 +1,4 @@
-package com.readme.careerly_android
+package org.sopt.careerly_android
 
 import org.junit.Test
 

@@ -2,4 +2,6 @@
 <resources>
     <dimen name="bnv_height">48dp</dimen>
     <dimen name="bnv_item_size">19dp</dimen>
+
+    <dimen name="profile_image">40dp</dimen>
 </resources>

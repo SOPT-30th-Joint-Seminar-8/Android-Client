@@ -1,7 +1,7 @@
 import org.gradle.api.JavaVersion
 
 object Versions {
-    const val kotlinVersion = "1.6.20"
+    const val kotlinVersion = "1.6.21"
     const val kotlinCoroutinesVersion = "1.6.0"
     const val coreKtxVersion = "1.7.0"
     const val appCompatVersion = "1.4.0"
@@ -26,6 +26,7 @@ object Versions {
     const val androidTestVersion = "1.1.3"
     const val timberVersion = "4.7.1"
     const val leakCanaryVersion = "2.6"
+    const val readMoreLineVersion = "1.0.0"
 
     val javaVersion = JavaVersion.VERSION_11
     const val jvmVersion = "11"
