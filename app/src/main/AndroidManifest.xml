@@ -16,13 +16,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Careerly_Android"
         android:usesCleartextTraffic="true"
-        tools:targetApi="31">
+        tools:targetApi="32">
         <activity
             android:name=".ui.post.PostActivity"
             android:exported="false" />
         <activity
             android:name=".ui.post.detail.PostDetailActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".ui.MainActivity"
             android:exported="true">

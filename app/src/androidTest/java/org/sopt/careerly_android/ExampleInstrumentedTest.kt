@@ -1,4 +1,4 @@
-package com.readme.careerly_android
+package org.sopt.careerly_android
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

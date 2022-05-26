@@ -3,20 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/RoundS/AndroidStudioProject/Android-Client/app/src/main/res/drawable/circle_light_gray_radius_4.xml" value="0.2095" />
-        <entry key="..\:/Users/RoundS/AndroidStudioProject/Android-Client/app/src/main/res/drawable/ic_btn_edit.xml" value="0.1" />
-        <entry key="..\:/Users/RoundS/AndroidStudioProject/Android-Client/app/src/main/res/drawable/ic_btn_registration.xml" value="0.1" />
-        <entry key="..\:/Users/RoundS/AndroidStudioProject/Android-Client/app/src/main/res/drawable/ic_container_imbedded.xml" value="0.2285" />
-        <entry key="..\:/Users/RoundS/AndroidStudioProject/Android-Client/app/src/main/res/drawable/ic_home.xml" value="0.1" />
-        <entry key="..\:/Users/RoundS/AndroidStudioProject/Android-Client/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
-        <entry key="..\:/Users/RoundS/AndroidStudioProject/Android-Client/app/src/main/res/layout/activity_main.xml" value="0.253125" />
-        <entry key="..\:/Users/RoundS/AndroidStudioProject/Android-Client/app/src/main/res/layout/activity_post.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/RoundS/AndroidStudioProject/Android-Client/app/src/main/res/layout/activity_post_detail.xml" value="0.264" />
+        <entry key="app/src/main/res/drawable/ic_btn_back.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_btn_follow.xml" value="0.107" />
+        <entry key="app/src/main/res/drawable/recatngle_fill_red_4.xml" value="0.1365" />
+        <entry key="app/src/main/res/drawable/rectangle_fill_red_nonactive_4.xml" value="0.1365" />
+        <entry key="app/src/main/res/drawable/selector_complete_btn.xml" value="0.1365" />
         <entry key="app/src/main/res/font/pretendard.xml" value="0.15416666666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3488372093023256" />
-        <entry key="app/src/main/res/layout/activity_post.xml" value="0.23333333333333334" />
+        <entry key="app/src/main/res/layout/activity_post.xml" value="0.23192749023437503" />
         <entry key="app/src/main/res/layout/activity_post_detail.xml" value="0.23333333333333334" />
         <entry key="app/src/main/res/layout/fragment_empty.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1375" />
+        <entry key="app/src/main/res/layout/item_post.xml" value="0.1" />
         <entry key="app/src/main/res/menu/menu_main.xml" value="0.23852386474609377" />
       </map>
     </option>

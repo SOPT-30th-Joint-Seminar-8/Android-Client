@@ -23,6 +23,7 @@
             android:id="@+id/bnv_main"
             android:layout_width="match_parent"
             android:layout_height="@dimen/bnv_height"
+            android:background="@color/white"
             app:elevation="0dp"
             app:itemIconSize="@dimen/bnv_item_size"
             app:itemIconTint="@color/selector_nav_item"
