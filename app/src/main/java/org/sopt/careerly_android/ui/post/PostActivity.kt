@@ -5,24 +5,29 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.core.widget.addTextChangedListener
+import dagger.hilt.android.AndroidEntryPoint
 import org.sopt.careerly_android.R
 import org.sopt.careerly_android.databinding.ActivityPostBinding
 import org.sopt.careerly_android.ui.post.detail.PostDetailActivity
 import org.sopt.careerly_android.ui.viewmodel.PostViewModel
 import org.sopt.careerly_android.util.binding.BindingActivity
 
+@AndroidEntryPoint
 class PostActivity : BindingActivity<ActivityPostBinding>(R.layout.activity_post) {
     private val viewModel: PostViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding.vm = viewModel
-        binding.ibBack.setOnClickListener {
-            finish()
-        }
-        binding.tvComplete.setOnClickListener {
-            startActivity(PostDetailActivity.getIntent(this))
-            finish()
+        with(binding) {
+            vm = viewModel
+            ibBack.setOnClickListener {
+                finish()
+            }
+            tvComplete.setOnClickListener {
+                viewModel.postPostWrite()
+                startActivity(PostDetailActivity.getIntent(this@PostActivity))
+                finish()
+            }
         }
         initTextChangeEvent()
     }
