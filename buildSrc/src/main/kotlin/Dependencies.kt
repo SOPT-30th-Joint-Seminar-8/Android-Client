@@ -40,6 +40,8 @@ object KaptDependencies {
 object ThirdPartyDependencies {
     const val glide = "com.github.bumptech.glide:glide:${Versions.glideVersion}"
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofitVersion}"
+    const val retrofitGsonConverter =
+        "com.squareup.retrofit2:converter-gson:${Versions.retrofitVersion}"
     const val okHttpBom = "com.squareup.okhttp3:okhttp-bom:${Versions.okHttpVersion}"
     const val okHttp = "com.squareup.okhttp3:okhttp"
     const val okHttpLoggingInterceptor =
