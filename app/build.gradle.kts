@@ -49,9 +49,6 @@ dependencies {
 
     // Dagger-Hilt
     implementation(AndroidXDependencies.hilt)
-    implementation("androidx.appcompat:appcompat:1.4.1")
-    implementation("com.google.android.material:material:1.4.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.3")
     kapt(KaptDependencies.hiltCompiler)
 
     // Jetpack Security
@@ -72,12 +69,10 @@ dependencies {
 
     // Http Client Library
     implementation(ThirdPartyDependencies.retrofit)
+    implementation(ThirdPartyDependencies.retrofitGsonConverter)
     implementation(platform(ThirdPartyDependencies.okHttpBom))
     implementation(ThirdPartyDependencies.okHttp)
     implementation(ThirdPartyDependencies.okHttpLoggingInterceptor)
-
-    // Logger - Timber
-    implementation(ThirdPartyDependencies.timber)
 
     // ReadMoreLine
     implementation(ThirdPartyDependencies.readMoreLine)
