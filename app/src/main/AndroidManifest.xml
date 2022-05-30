@@ -19,6 +19,7 @@
         tools:targetApi="32">
         <activity
             android:name=".ui.post.PostActivity"
+            android:windowSoftInputMode="adjustResize"
             android:exported="false" />
         <activity
             android:name=".ui.post.detail.PostDetailActivity"
