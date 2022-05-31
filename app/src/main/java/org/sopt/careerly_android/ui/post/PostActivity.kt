@@ -25,11 +25,21 @@ class PostActivity : BindingActivity<ActivityPostBinding>(R.layout.activity_post
             }
             tvComplete.setOnClickListener {
                 viewModel.postPostWrite()
-                startActivity(PostDetailActivity.getIntent(this@PostActivity))
-                finish()
             }
         }
         initTextChangeEvent()
+        observeData()
+    }
+
+    private fun observeData() {
+        viewModel.postDetailId.observe(this) {
+            startActivity(
+                PostDetailActivity
+                    .getIntent(this@PostActivity)
+                    .putExtra(POST_ID, it)
+            )
+            finish()
+        }
     }
 
     private fun initTextChangeEvent() {
@@ -41,6 +51,8 @@ class PostActivity : BindingActivity<ActivityPostBinding>(R.layout.activity_post
     }
 
     companion object {
+        const val POST_ID = "POST_ID"
+
         fun getIntent(context: Context): Intent {
             return Intent(context, PostActivity::class.java)
         }
