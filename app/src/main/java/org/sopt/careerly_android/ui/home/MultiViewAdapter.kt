@@ -1,6 +1,7 @@
 package org.sopt.careerly_android.ui.home
 
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -9,27 +10,33 @@ import com.bumptech.glide.Glide
 import org.sopt.careerly_android.databinding.ItemPostBinding
 import org.sopt.careerly_android.databinding.RecyclerviewProfileBinding
 import org.sopt.careerly_android.ui.post.detail.PostDetailActivity
-import org.sopt.careerly_android.ui.viewmodel.MainViewModel.Companion.EXAMPLE_PROFILE_IMAGE
+import org.sopt.careerly_android.ui.viewmodel.HomeViewModel
 
 class MultiViewAdapter :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-    private val _data = mutableListOf<MultiData>()
-    var data: List<MultiData> = _data
+    private val _data = mutableListOf<PostsData>()
+    var data: List<PostsData> = _data
         set(value) {
             _data.clear()
             _data.addAll(value)
             notifyDataSetChanged()
         }
 
-    private val profileInfo = mutableListOf(
-        ProfileData("Hello", EXAMPLE_PROFILE_IMAGE),
-        ProfileData("Hello2", EXAMPLE_PROFILE_IMAGE),
-        ProfileData("Hello3", EXAMPLE_PROFILE_IMAGE)
-    )
+    private val _profileData = mutableListOf<ProfileData>()
+    var profileData: List<ProfileData> = _profileData
+        set(value) {
+            _profileData.clear()
+            _profileData.addAll(value)
+            notifyDataSetChanged()
+        }
+
+
+    private val profileInfo : MutableList<ProfileData> = mutableListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
 
         return when (viewType) {
+
             CONTENT_TYPE -> {
                 ItemPostBinding.inflate(LayoutInflater.from(parent.context), parent, false).let {
                     ContentViewHolder(it)
@@ -48,6 +55,9 @@ class MultiViewAdapter :
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+        for(i in 0 until _profileData.size){
+            profileInfo.add(ProfileData(_profileData[i].followers, _profileData[i].job, _profileData[i].userName))
+        }
         when (position != 0 && position % 4 == 3) {
             false -> (holder as ContentViewHolder).bind(_data[position])
             else -> (holder as ProfileViewHolder).bind(profileInfo)
@@ -67,14 +77,18 @@ class MultiViewAdapter :
     class ContentViewHolder(private val binding: ItemPostBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: MultiData) {
+        fun bind(item: PostsData) {
             with(binding) {
                 root.setOnClickListener {
                     root.context.startActivity(Intent(root.context, PostDetailActivity::class.java))
                 }
-                tvName.text = item.name
-                loadImage(sivImage, item.profileImage)
-                loadImage(ivShareContent, item.postImage)
+                tvName.text = item.userName
+                loadImage(sivImage, item.userImg)
+                tvIntroduce.text = item.userEmail
+                tvContent.text = item.text
+                tvRecommend.text = item.likes.toString() + "명이 추천했어요"
+                tvClick.text = "조회" + item.views.toString()
+                tvTime.text = item.createdAt
             }
         }
 
