@@ -1,88 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginHorizontal="8dp">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="152dp"
-        android:layout_height="270dp"
-        app:cardCornerRadius="4dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <data>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/cl_profile"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <variable
+            name="profileData"
+            type="org.sopt.careerly_android.ui.home.ProfileData" />
 
-            <ImageView
-                android:id="@+id/iv_profile"
-                android:layout_width="152dp"
-                android:layout_height="119dp"
-                android:scaleType="centerCrop"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/cl_profile"
-                tools:src="@drawable/ic_launcher_background" />
+    </data>
 
-            <TextView
-                android:id="@+id/tv_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
-                android:fontFamily="@font/pretendard_bold"
-                android:text="이유진"
-                android:textColor="@color/dark_gray"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/iv_profile" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp">
 
-            <TextView
-                android:id="@+id/tv_carrier"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:fontFamily="@font/pretendard_regular"
-                android:gravity="center"
-                android:text="우아한 형제들/프로\n덕트 디자이너"
-                android:textColor="@color/dark_gray"
-                android:textSize="12sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_name" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="152dp"
+            android:layout_height="270dp"
+            app:cardCornerRadius="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/tv_follower"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="9dp"
-                android:fontFamily="@font/pretendard_regular"
-                android:text="팔로워 1,000명 이상"
-                android:textColor="@color/mdgray1"
-                android:textSize="12sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_carrier" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <Button
-                android:id="@+id/bt_follow"
-                android:layout_width="124dp"
-                android:layout_height="28dp"
-                android:layout_marginTop="7dp"
-                android:background="@drawable/circle_red_white_radius_4"
-                android:fontFamily="@font/pretendard_regular"
-                android:text="팔로우"
-                android:textColor="@color/careerly_red"
-                android:textSize="12sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_follower" />
+                <ImageView
+                    android:id="@+id/iv_profile"
+                    android:layout_width="152dp"
+                    android:layout_height="119dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/cl_profile"
+                    tools:src="@drawable/ic_launcher_background" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:text="@{profileData.userName}"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_profile" />
 
-    </androidx.cardview.widget.CardView>
+                <TextView
+                    android:id="@+id/tv_carrier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/pretendard_regular"
+                    android:gravity="center"
+                    android:text="@{profileData.job}"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_name" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/tv_follower"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/pretendard_regular"
+                    android:text='@{profileData.followers > 2000 ? "2000명이상" : String.valueOf(profileData.followers)}'
+                    android:textColor="@color/mdgray1"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_carrier" />
+
+                <Button
+                    android:id="@+id/bt_follow"
+                    android:layout_width="124dp"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/circle_red_white_radius_4"
+                    android:fontFamily="@font/pretendard_regular"
+                    android:text="팔로우"
+                    android:textColor="@color/careerly_red"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_follower" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

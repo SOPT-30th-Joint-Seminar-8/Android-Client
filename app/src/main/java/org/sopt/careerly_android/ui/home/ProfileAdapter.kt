@@ -32,10 +32,7 @@ class ProfileAdapter : RecyclerView.Adapter<ProfileAdapter.ProfileViewHolder>() 
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: ProfileData) {
-            binding.tvName.text = item.name
-            Glide.with(binding.ivProfile.context)
-                .load(item.profileImage)
-                .into(binding.ivProfile)
+            binding.profileData = item
         }
     }
 }
