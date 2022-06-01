@@ -27,8 +27,8 @@ class HomeViewModel @Inject constructor(private val postRepository: PostReposito
         viewModelScope.launch {
             postRepository.getPostList(
 
-            ).onSuccess {
-                val data = it.hotProfiles.map {
+            ).onSuccess { responseGetDTO ->
+                val data = responseGetDTO.hotProfiles.map {
                     ProfileData(
                         it.followers,
                         it.job,
@@ -45,8 +45,8 @@ class HomeViewModel @Inject constructor(private val postRepository: PostReposito
     fun getPostList() {
         viewModelScope.launch {
             postRepository.getPostList(
-            ).onSuccess {
-                val data = it.posts.map {
+            ).onSuccess { responseGetDTO ->
+                val data = responseGetDTO.posts.map {
                     PostsData(
                         it.createdAt,
                         it.likes,
