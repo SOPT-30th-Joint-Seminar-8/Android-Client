@@ -14,5 +14,5 @@ class PostDataSourceImpl @Inject constructor(
 ) : PostDataSource {
     override suspend fun postPostWrite(data: RequestPostDTO) = postService.postPostWrite(data)
 
-    override suspend fun getPostList(): BaseResponse<ResponseGetDTO> = getService.getPostList()
+    override suspend fun getPostList() = getService.getPostList()
 }

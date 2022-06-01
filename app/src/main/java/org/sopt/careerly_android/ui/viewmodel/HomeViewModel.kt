@@ -15,26 +15,27 @@ import javax.inject.Inject
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(private val postRepository: PostRepository) : ViewModel() {
-    val postsData = MutableLiveData<List<PostsData>>()
-    val profileData = MutableLiveData<List<ProfileData>>()
+    private val _postsData = MutableLiveData<List<PostsData>>()
+    val postsData: LiveData<List<PostsData>>
+        get() = _postsData
+
+    private val _profileData = MutableLiveData<List<ProfileData>>()
+    val profileData: LiveData<List<ProfileData>>
+        get() = _profileData
 
     fun getProfileData() {
         viewModelScope.launch {
             postRepository.getPostList(
 
             ).onSuccess {
-                val data = mutableListOf<ProfileData>()
-                for (i in 0 until it.hotProfiles.size) {
-                    val item = it.hotProfiles[i]
-                    data.add(
-                        ProfileData(
-                            item.followers,
-                            item.job,
-                            item.userName
-                        )
+                val data = it.hotProfiles.map {
+                    ProfileData(
+                        it.followers,
+                        it.job,
+                        it.userName
                     )
                 }
-                profileData.value = data
+                _profileData.value = data
             }.onFailure {
                 it.printStackTrace()
             }
@@ -45,23 +46,19 @@ class HomeViewModel @Inject constructor(private val postRepository: PostReposito
         viewModelScope.launch {
             postRepository.getPostList(
             ).onSuccess {
-                val data = mutableListOf<PostsData>()
-                for (i in 0 until it.posts.size) {
-                    val item = it.posts[i]
-                    data.add(
-                        PostsData(
-                            item.createdAt,
-                            item.likes,
-                            item.text,
-                            item.userEmail,
-                            item.userName,
-                            item.userImg,
-                            item.postId,
-                            item.views
-                        )
+                val data = it.posts.map {
+                    PostsData(
+                        it.createdAt,
+                        it.likes,
+                        it.text,
+                        it.userEmail,
+                        it.userName,
+                        it.userImg,
+                        it.postId,
+                        it.views
                     )
                 }
-                postsData.value = data
+                _postsData.value = data
             }.onFailure {
                 it.printStackTrace()
             }

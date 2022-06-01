@@ -31,7 +31,7 @@ class MultiViewAdapter :
         }
 
 
-    private val profileInfo : MutableList<ProfileData> = mutableListOf()
+    private val profileInfo: MutableList<ProfileData> = mutableListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
 
@@ -55,8 +55,10 @@ class MultiViewAdapter :
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        for(i in 0 until _profileData.size){
-            profileInfo.add(ProfileData(_profileData[i].followers, _profileData[i].job, _profileData[i].userName))
+        for (i in 0 until _profileData.size) {
+            with(_profileData[i]) {
+                profileInfo.add(ProfileData(followers, job, userName))
+            }
         }
         when (position != 0 && position % 4 == 3) {
             false -> (holder as ContentViewHolder).bind(_data[position])
@@ -82,13 +84,8 @@ class MultiViewAdapter :
                 root.setOnClickListener {
                     root.context.startActivity(Intent(root.context, PostDetailActivity::class.java))
                 }
-                tvName.text = item.userName
-                loadImage(sivImage, item.userImg)
-                tvIntroduce.text = item.userEmail
-                tvContent.text = item.text
-                tvRecommend.text = item.likes.toString() + "명이 추천했어요"
-                tvClick.text = "조회" + item.views.toString()
-                tvTime.text = item.createdAt
+                binding.postsData = item
+//                loadImage(sivImage, item.userImg)
             }
         }
 

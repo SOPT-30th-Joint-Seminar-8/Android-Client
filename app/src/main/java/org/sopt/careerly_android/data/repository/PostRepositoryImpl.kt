@@ -13,7 +13,7 @@ class PostRepositoryImpl @Inject constructor(
         dataSource.postPostWrite(data).data
     }
 
-    override suspend fun getPostList(): Result<ResponseGetDTO> = runCatching {
+    override suspend fun getPostList() = runCatching {
         dataSource.getPostList().data
     }
 }
