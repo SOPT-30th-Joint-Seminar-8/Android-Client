@@ -1,27 +1,67 @@
 package org.sopt.careerly_android.ui.viewmodel
 
-import android.app.Activity
-import android.content.Intent
-import android.widget.Button
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import org.sopt.careerly_android.ui.home.MultiData
+import org.sopt.careerly_android.domain.PostRepository
+import org.sopt.careerly_android.ui.home.PostsData
+import org.sopt.careerly_android.ui.home.ProfileData
 import org.sopt.careerly_android.ui.viewmodel.MainViewModel.Companion.EXAMPLE_PROFILE_IMAGE
 import javax.inject.Inject
 
-class HomeViewModel @Inject constructor() : ViewModel() {
-    private val _multiData = MutableLiveData<List<MultiData>>()
-    val multiData: LiveData<List<MultiData>>
-        get() = _multiData
+@HiltViewModel
+class HomeViewModel @Inject constructor(private val postRepository: PostRepository) : ViewModel() {
+    private val _postsData = MutableLiveData<List<PostsData>>()
+    val postsData: LiveData<List<PostsData>>
+        get() = _postsData
 
-    fun getMultiData() {
-        val data = mutableListOf<MultiData>()
-        for (i in 1..7) {
-            data.add(MultiData("Hello${i}", EXAMPLE_PROFILE_IMAGE, EXAMPLE_PROFILE_IMAGE))
+    private val _profileData = MutableLiveData<List<ProfileData>>()
+    val profileData: LiveData<List<ProfileData>>
+        get() = _profileData
+
+    fun getProfileData() {
+        viewModelScope.launch {
+            postRepository.getPostList(
+
+            ).onSuccess { responseGetDTO ->
+                val data = responseGetDTO.hotProfiles.map {
+                    ProfileData(
+                        it.followers,
+                        it.job,
+                        it.userName
+                    )
+                }
+                _profileData.value = data
+            }.onFailure {
+                it.printStackTrace()
+            }
         }
-        _multiData.value = data
+    }
+
+    fun getPostList() {
+        viewModelScope.launch {
+            postRepository.getPostList(
+            ).onSuccess { responseGetDTO ->
+                val data = responseGetDTO.posts.map {
+                    PostsData(
+                        it.createdAt,
+                        it.likes,
+                        it.text,
+                        it.userEmail,
+                        it.userName,
+                        it.userImg,
+                        it.postId,
+                        it.views
+                    )
+                }
+                _postsData.value = data
+            }.onFailure {
+                it.printStackTrace()
+            }
+        }
     }
 }

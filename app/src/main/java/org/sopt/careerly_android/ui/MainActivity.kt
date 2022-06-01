@@ -6,6 +6,7 @@ import android.graphics.drawable.BitmapDrawable
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.core.view.MenuItemCompat
+import dagger.hilt.android.AndroidEntryPoint
 import org.sopt.careerly_android.R
 import org.sopt.careerly_android.databinding.ActivityMainBinding
 import org.sopt.careerly_android.ui.home.HomeFragment
@@ -15,6 +16,7 @@ import org.sopt.careerly_android.util.borderedCircularBitmap
 import org.sopt.careerly_android.util.ext.replace
 import org.sopt.careerly_android.util.px
 
+@AndroidEntryPoint
 class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main) {
     private val viewModel: MainViewModel by viewModels()
 

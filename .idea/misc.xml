@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/joon_/Desktop/Android-Client/app/src/main/res/layout/item_post.xml" value="0.4" />
+        <entry key="..\:/Users/joon_/Desktop/Android-Client/app/src/main/res/layout/item_profile.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/drawable/ic_btn_back.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_btn_follow.xml" value="0.107" />
         <entry key="app/src/main/res/drawable/recatngle_fill_red_4.xml" value="0.1365" />
