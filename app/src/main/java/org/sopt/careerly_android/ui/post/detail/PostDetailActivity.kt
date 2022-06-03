@@ -14,6 +14,7 @@ import org.sopt.careerly_android.R
 import org.sopt.careerly_android.databinding.ActivityPostDetailBinding
 import org.sopt.careerly_android.ui.ReviewAdapter
 import org.sopt.careerly_android.ui.ReviewData
+import org.sopt.careerly_android.ui.post.PostActivity.Companion.POST_ID
 import org.sopt.careerly_android.ui.viewmodel.MainViewModel.Companion.EXAMPLE_PROFILE_IMAGE
 import org.sopt.careerly_android.ui.viewmodel.PostViewModel
 import org.sopt.careerly_android.util.binding.BindingActivity
@@ -28,6 +29,9 @@ class PostDetailActivity :
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initAdapter()
+
+        viewModel.getPostDetail(intent.getStringExtra(POST_ID) ?: "")
+
         binding.btnBack.setOnClickListener {
             finish()
         }
@@ -62,6 +66,7 @@ class PostDetailActivity :
     }
 
     private fun initAdapter() {
+        // TODO : 이부분을 아래 어댑터 + 데이터 연동로직으로 빼주시면 간단할거에요!
         reviewAdapter = ReviewAdapter()
         binding.rvReview.adapter = reviewAdapter
         reviewAdapter.reviewList.addAll(
@@ -106,13 +111,15 @@ class PostDetailActivity :
 
     private fun observeData() {
         viewModel.postDetailReply.observe(this) {
-
+            // TODO : 댓글리스트 + 어댑터 연동 여기서
         }
     }
 
     private fun initClickEvent() {
         binding.btnRegistration.setOnClickListener {
-
+            viewModel.postReply(
+                intent.getStringExtra(POST_ID) ?: ""
+            )
         }
     }
 
